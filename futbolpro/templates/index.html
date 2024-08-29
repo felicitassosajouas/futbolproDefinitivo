@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="images/png" href="../static/images/premio-de-futbol.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Rincón Futbolístico</title>
+</head>
+<body>
+    <header class="header">
+        <section class="logoname">
+            <!-- logo -->
+            <a href="#" id="logo"><img class="images" src="../static/images/log.png" width="120px" height="120px" alt="logo"></a>
+            <h1 id="futgol">FUT-GOL</h1>
+        </section>
+        <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('jugadores') }}">Jugadores</a></li>
+            <li><a href="{{ url_for('equipos') }}">Equipos</a></li>
+            <li><a href="{{ url_for('estadisticas') }}">Estadísticas</a></li>
+            <li><a href="{{ url_for('iniciarsesion') }}">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main class="main">
+        <p> El lugar perfecto para los apasionados del fútbol. Estamos acá para compartir con vos todo lo relacionado con este hermoso deporte. Desde las últimas noticias, análisis de partidos, perfiles de jugadores y equipos, hasta debates sobre tácticas y estrategias.</p>
+    </main>
+
+
+
+    <footer>
+        <p>FOOTER Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

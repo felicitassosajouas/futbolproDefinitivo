@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="images/png" href="../static/images/premio-de-futbol.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/cards.css">
+    <title>Rincón Futbolístico</title>
+</head>
+<body>
+    <header class="header">
+        <section class="logoname">
+            <!-- logo -->
+            <a href="index.html" id="logo"><img class="images" src="../static/images/log.png" width="120px" height="120px" alt="logo"></a>
+            <h1>FUT-GOL</h1>
+        </section>
+        <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('jugadores') }}">Jugadores</a></li>
+            <li><a href="{{ url_for('equipos') }}">Equipos</a></li>
+            <li><a href="{{ url_for('estadisticas') }}">Estadísticas</a></li>
+            <li><a href="{{ url_for('iniciarsesion') }}">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <h2>JUGADORES COPA AMÉRICA</h2>
+
+    <div class="container">
+        {% for jugador in jugadores %}
+        <div class="card">
+            <img src="../static/images/{{ jugador[18] }}" alt="">
+            <h5>{{ jugador[0] }}</h5>
+
+            <input type="checkbox" id="toggle-info-{{ jugador[1] }}" class="toggle-checkbox">
+            <label for="toggle-info-{{ jugador[1] }}" class="toggle-btn"></label>
+
+            <div class="info">
+                <p>Edad: {{ jugador[2] }}</p>
+                <p>Nacimiento: {{ jugador[3] }}</p>
+                <p>Altura: {{ jugador[4] }} cm</p>
+                <p>Peso: {{ jugador[5] }} kg</p>
+                <p>Nacionalidad: {{ jugador[6] }}</p>
+                <p>Posición: {{ jugador[7] }}</p>
+                <p>Equipo actual: {{ jugador[8] }}</p>
+                <p>Partidos jugados: {{ jugador[9] }}</p>
+                <p>Goles: {{ jugador[10] }}</p>
+                <p>Asistencias: {{ jugador[11] }}</p>
+                <p>Tarjetas amarillas: {{ jugador[12] }}</p>
+                <p>Tarjetas rojas: {{ jugador[13] }}</p>
+                <p>Pie dominante: {{ jugador[14] }}</p>
+                <p>Historial equipos: {{ jugador[15] }}</p>
+                <p>Lesiones recientes: {{ jugador[16] }}</p>
+                <p>Redes: {{ jugador[17] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <footer>
+        <p>FOOTER Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
