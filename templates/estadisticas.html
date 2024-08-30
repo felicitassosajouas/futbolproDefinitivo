@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/estadisticas.css">
     <title>Rincón Futbolístico</title>
 </head>
 <body>
@@ -23,23 +24,34 @@
         </ul>
     </nav>
     </header>
-    <h2>ESTADÍSTICAS</h2>
-    <main class="main">
-        <p> El lugar perfecto para los apasionados del fútbol. Estamos acá para compartir con vos todo lo relacionado con este hermoso deporte. Desde las últimas noticias, análisis de partidos, perfiles de jugadores y equipos, hasta debates sobre tácticas y estrategias.</p>
-    </main>
+    <h2>TODOS LOS JUGADORES DE COPA AMÉRICA</h2>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="tabla" >
 
-    <img src="../static/images/log.png" alt="">
-    <img src="../static/images/log.png" alt="">
-    <img src="../static/images/log.png" alt="">
-
-
-    <footer>
-        <p>FOOTER Todos los derechos reservados</p>
-    </footer>
-
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Equipo Actual</th>
+                    <th>Partidos Jugados</th>
+                    <th>Goles</th>
+                    <th>Asistencias</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for jugador in estadisticas %}
+                <tr>
+                    <td class="dato">{{ jugador[0] }}</td>
+                    <td class="dato">{{ jugador[1] }}</td>
+                    <td class="dato">{{ jugador[2] }}</td>
+                    <td class="dato">{{ jugador[3] }}</td>
+                    <td class="dato">{{ jugador[4] }}</td>
+                    <td class="dato">{{ jugador[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

@@ -1,0 +1,25 @@
+table{
+    font-size: 150%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+td,th{
+    border-left: solid 1px rgb(62, 62, 62);
+    border-right: solid 1px rgb(62, 62, 62);
+}
+

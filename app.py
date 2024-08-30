@@ -72,7 +72,15 @@ def iniciarsesion():
 
 @app.route('/estadisticas')
 def estadisticas():
-    return render_template('estadisticas.html')
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT nombre, edad, equipo_actual, partidos_jugados, goles, asistencias FROM jugadores')
+    estadisticas = cur.fetchall()
+    cur.close()
+    if not estadisticas:
+        flash('No se encontraron estadísticas de jugadores')
+        return redirect(url_for('index'))
+    return render_template('estadisticas.html', estadisticas=estadisticas)
+
 
 if __name__ == '__main__':
     app.run(port = 3000, debug = True)
