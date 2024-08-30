@@ -1,0 +1,91 @@
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 40px);
+    }
+}
+h5 {
+    color: #666;
+    font-size: 100%;
+}
+
+.img-description {
+    width: 100%;
+    height: 800px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(232, 225, 225);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(230, 11, 11, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border-style: solid;
+    border-color: #c91a1a !important;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.card p {
+    color: #666;
+}
+
+/* Ocultar el checkbox */
+.toggle-checkbox {
+    display: none;
+}
+
+/* Estilo para el botón */
+.toggle-btn {
+    background-color: #06101b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    border-radius: 5px;
+    background-color: #06101bda;
+    color: #c91a1a;
+}
+
+/* Ocultar la información inicialmente */
+.info {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Mostrar la información cuando el checkbox esté marcado */
+.toggle-checkbox:checked ~ .info {
+    display: block;
+}
+
+/* Cambiar el texto del label cuando se seleccione el checkbox */
+.toggle-checkbox:checked + .toggle-btn::after {
+    content: 'Mostrar menos';
+}
+
+/* Texto original para el botón */
+.toggle-btn::after {
+    content: 'Mostrar más';
+}
+

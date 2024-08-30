@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="images/png" href="../static/images/premio-de-futbol.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/form.css">
+    <title>Rincón Futbolístico</title>
+</head>
+<body>
+    <header class="header">
+        <section class="logoname">
+            <!-- logo -->
+            <a href="index.html" id="logo"><img class="images" src="../static/images/log.png" width="120px" height="120px" alt="logo"></a>
+            <h1>FUT-GOL</h1>
+        </section>
+        <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('jugadores') }}">Jugadores</a></li>
+            <li><a href="{{ url_for('equipos') }}">Equipos</a></li>
+            <li><a href="{{ url_for('estadisticas') }}">Estadísticas</a></li>
+            <li><a href="{{ url_for('iniciarsesion') }}">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <h2>INICIAR SESIÓN</h2>
+    <div id="div">
+        <form action="/iniciarsesion" id="form" method="POST">
+            <input type="text" class="f" name="email" placeholder="EMAIL">
+            <input type="password" class="f" name="contrasena" placeholder="CONTRASEÑA">
+            <button type="submit" class="toggle-btn" class="f">INGRESAR</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>FOOTER Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
